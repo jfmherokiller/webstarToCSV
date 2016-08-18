@@ -3,7 +3,7 @@
  */
 var ICal = require('../lib/index');
 var cal = ICal();
-
+var moment = require('moment-timezone');
 function testing(classlist) {
 
     classlist.forEach(createEvents);
@@ -20,11 +20,11 @@ function createEvents(element, index, array) {
         description: element.Description(),
         location: element.room,
         method: "PUBLISH",
-        timezone:"America/Chicago",
+        timezone:moment.tz.guess(),
         repeating: {
         freq: 'WEEKLY', // required
         until: element.classEnd,
-        byDay: element.days // repeat only sunday and monday
+        byDay: element.days
     }
     });
 }

@@ -11,8 +11,8 @@ function ClassObj(Classname, Number, Section, Component, DaysAndTimes, Room, Ins
     var timestarttemp = daysandtimestemp.replace(daystemp,"").trim().split("-")[0].trim();
     var timeendtemp = daysandtimestemp.replace(daystemp,"").trim().split("-")[1].trim();
     this.days = daystemp.toLocaleLowerCase().match(/[\s\S]{1,2}/g);
-    this.timestart = moment.tz(timestarttemp,"hh:mmA","America/Chicago")._d;
-    this.timeend = moment.tz(timeendtemp,"hh:mmA","America/Chicago")._d;
+    this.timestart = moment.tz(timestarttemp,"hh:mmA",moment.tz.guess())._d;
+    this.timeend = moment.tz(timeendtemp,"hh:mmA",moment.tz.guess())._d;
     this.classname = Classname;
     this.numberAndSection = Number+"-"+Section;
     this.instructorname = InstructorName;
