@@ -2,25 +2,17 @@
   "name": "webstar-to-ical",
   "version": "0.0.1",
   "main": "parsefromhtmlfile/main.js",
-  "description": "Converts the html page from webstar into ical or csv",
+  "description": "Converts the html page from webstar into ical",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jfmherokiller",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^0.20.0",
-    "express": "latest",
     "jsdom": "^9.4.2",
     "moment": "^2.14.1",
-    "request": "latest",
-    "superagent": "latest",
     "yargs": "latest"
   },
   "devDependencies": {
-    "babel-cli": "^6.11.4",
-    "babel-preset-es2015": "^6.13.2",
-    "rollup-plugin-commonjs": "^3.3.1",
-    "rollup-plugin-node-resolve": "^2.0.0"
   }
 }
