@@ -20,12 +20,12 @@ function createEvents(element, index, array) {
         description: element.Description(),
         location: element.room,
         method: "PUBLISH",
-        timezone:moment.tz.guess(),
+        timezone: moment.tz.guess(),
         repeating: {
-        freq: 'WEEKLY', // required
-        until: element.classEnd,
-        byDay: element.days
-    }
+            freq: 'WEEKLY', // required
+            until: element.classEnd,
+            byDay: element.days
+        }
     });
 }
 
