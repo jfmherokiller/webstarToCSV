@@ -7,3 +7,5 @@ so far i have been able to successfully convert and import the current printer f
 usage is main.js -f "path to printer friendly list view page with extension" the program will print out.ics to the working directory and you should be able to just import this file into google calandar.
 
 [![Build Status](https://travis-ci.org/jfmherokiller/webstarToCSV.svg?branch=master)](https://travis-ci.org/jfmherokiller/webstarToCSV)
+
+[![Coverage Status](https://coveralls.io/repos/github/jfmherokiller/webstarToCSV/badge.svg?branch=master)](https://coveralls.io/github/jfmherokiller/webstarToCSV?branch=master)
