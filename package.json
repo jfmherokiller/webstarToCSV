@@ -15,5 +15,6 @@
     "moment-timezone": "latest"
   },
   "devDependencies": {
+    "coveralls": "^2.11.12"
   }
 }
