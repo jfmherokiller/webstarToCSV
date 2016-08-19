@@ -297,7 +297,7 @@ var ICalAlarm = function(_data, event) {
         }
         else if(data.type === 'audio' && data.attach) {
             g += 'ATTACH;VALUE=URI:' + data.attach.uri + '\r\n';
-        }
+           }
         else if(data.type === 'audio') {
             g += 'ATTACH;VALUE=URI:Basso\r\n';
         }

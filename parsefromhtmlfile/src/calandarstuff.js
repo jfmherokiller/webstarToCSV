@@ -1,14 +1,14 @@
 /**
  * Created by jfmmeyers on 8/17/16.
  */
-var ICal = require('../lib/index');
+var ICal = require('../../libfiles/icalpatched/index');
 var cal = ICal();
 var moment = require('moment-timezone');
 function testing(classlist) {
 
     classlist.forEach(createEvents);
     console.log(cal.toString());
-    cal.save("test.ics");
+    return cal;
 
 }
 function createEvents(element, index, array) {

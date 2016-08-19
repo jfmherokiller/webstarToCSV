@@ -1,8 +1,8 @@
 var ClassObj = require("./classobjectstuff");
 var calandar = require("./calandarstuff");
 var argv = require('yargs')
-    .usage('Usage: $0 -f [file]')
-    .demand(['f'])
+    .usage('Usage: $0 -f [file] -o [file]')
+    .demand(['f','o'])
     .argv;
 var fs = require('fs');
 
@@ -15,14 +15,14 @@ function callme(err, window) {
         throw err;
 
     }
-    var $ = require("./jquery-3.1.0")(window);
+    var $ = require("../../libfiles/jquery-3.1.0.js")(window);
     window.$ = $;
 
 
     extractInfo($);
     window.close();
     console.log(classes);
-    calandar(classes);
+    calandar(classes).save(argv.o);
 }
 var doc = jsdom.env({
     file: argv.f,
