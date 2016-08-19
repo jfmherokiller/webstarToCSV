@@ -4,7 +4,7 @@
   "main": "parsefromhtmlfile/src/main.js",
   "description": "Converts the html page from webstar into ical",
   "scripts": {
-    "test": "node parsefromhtmlfile/src/main.js -f testschdule.html"
+    "test": "./node_modules/.bin/istanbul cover parsefromhtmlfile/src/main.js -- -f testschdule.html"
   },
   "author": "jfmherokiller",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "moment-timezone": "latest"
   },
   "devDependencies": {
-    "coveralls": "^2.11.12"
+    "coveralls": "^2.11.12",
+    "istanbul": "^0.4.4"
   }
 }
