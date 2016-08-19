@@ -406,9 +406,9 @@ var ICalEvent = function(_data, calendar) {
     /**
      * Set/Get the event's organizer
      *
-     * @param {Object} organizer
      * @since 0.2.0
      * @returns {ICalEvent|String}
+     * @param _organizer
      */
     this.organizer = function(_organizer) {
         if(_organizer === undefined) {
@@ -459,9 +459,9 @@ var ICalEvent = function(_data, calendar) {
     /**
      * Create a new Attendee and return the attendee object…
      *
-     * @param [attendeeData] Attendee-Options
      * @since 0.2.0
      * @returns {ICalAttendee}
+     * @param _attendeeData
      */
     this.createAttendee = function(_attendeeData) {
         var ICalAttendee = require('./attendee.js'),
@@ -623,9 +623,9 @@ var ICalEvent = function(_data, calendar) {
     /**
      * Export Event to iCal
      *
-     * @param {ICalCalendar}
      * @since 0.2.0
      * @returns {String}
+     * @param calendar
      */
     this.generate = function(calendar) {
         var tools = require('./_tools.js'),

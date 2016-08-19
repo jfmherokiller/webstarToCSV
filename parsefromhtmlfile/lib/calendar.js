@@ -293,9 +293,9 @@ var ICalCalendar = function(_data) {
     /**
      * Create a new Event and return the calendar object…
      *
-     * @param option Event event
      * @deprecated since 0.2.0
      * @returns {ICalCalendar}
+     * @param event
      */
     this.addEvent = function(event) {
         if(!event || typeof event !== 'object') {
@@ -396,7 +396,7 @@ var ICalCalendar = function(_data) {
      * Save ical file with `fs.saveSync`
      *
      * @param {http.ServerResponse} response Response
-     * @param String [filename] Filename
+     * @param filename
      * @returns Number Number of Bytes written
      */
     this.serve = function(response, filename) {

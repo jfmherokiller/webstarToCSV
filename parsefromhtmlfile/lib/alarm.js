@@ -120,9 +120,9 @@ var ICalAlarm = function(_data, event) {
     /**
      * Set/Get Alarm Repetitions
      *
-     * @param {Number} Number of repetitions
      * @since 0.2.1
      * @returns {ICalAlarm|Number}
+     * @param repeat
      */
     this.repeat = function(repeat) {
         if(repeat === undefined) {
@@ -145,9 +145,9 @@ var ICalAlarm = function(_data, event) {
     /**
      * Set/Get Repeat Interval
      *
-     * @param {Number} Interval in seconds
      * @since 0.2.1
      * @returns {ICalAlarm|Number|Null}
+     * @param interval
      */
     this.interval = function(interval) {
         if(interval === undefined) {
@@ -170,9 +170,9 @@ var ICalAlarm = function(_data, event) {
     /**
      * Set/Get Attachment
      *
-     * @param {Object|String} File-URI or Object
      * @since 0.2.1
      * @returns {ICalAlarm|Object}
+     * @param _attach
      */
     this.attach = function(_attach) {
         if(_attach === undefined) {
