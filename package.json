@@ -1,10 +1,10 @@
 {
   "name": "webstar-to-ical",
   "version": "0.0.1",
-  "main": "parsefromhtmlfile/main.js",
+  "main": "parsefromhtmlfile/src/main.js",
   "description": "Converts the html page from webstar into ical",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node parsefromhtmlfile/src/main.js -f testschdule.html"
   },
   "author": "jfmherokiller",
   "license": "ISC",
