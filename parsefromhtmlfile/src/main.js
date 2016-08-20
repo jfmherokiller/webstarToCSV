@@ -15,7 +15,7 @@ function callme(err, window) {
         throw err;
 
     }
-    var $ = require("../../libfiles/jquery-3.1.0.js")(window);
+    var $ = require("../../libfiles/jquery-3.1.0")(window);
     window.$ = $;
 
 

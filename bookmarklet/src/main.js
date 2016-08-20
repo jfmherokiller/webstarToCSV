@@ -1,7 +1,7 @@
 /**
  * Created by jfmmeyers on 8/19/16.
  */
-$ = require('../../libfiles/jquery-3.1.0.min').noConflict(true);
+$ = require('../../libfiles/jquery-3.1.0').noConflict(true);
 var utils = require("./utilfunctions");
 window.addEventListener("DOMContentLoaded", stage2,false);
 if($("#ptifrmtgtframe").length)
