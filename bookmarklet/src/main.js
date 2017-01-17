@@ -15,7 +15,7 @@ if($("#ptifrmtgtframe").length)
     stage2();
 }
 function stage2() {
-    if($(".PSRADIOBUTTON").length != 0)
+    if(($(".PSRADIOBUTTON").length != 0)|| (jQuery("#DERIVED_CLASS_S_START_DT_LBL").length != 0))
     {
         alert("Error Wrong Page Please go to the printer Friendly Listview Page");
     }

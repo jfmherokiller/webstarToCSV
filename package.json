@@ -16,6 +16,7 @@
     "yargs": "latest"
   },
   "devDependencies": {
+    "browserify": "^13.3.0",
     "coveralls": "^2.11.12",
     "istanbul": "^0.4.4"
   }
