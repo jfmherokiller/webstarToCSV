@@ -20,7 +20,7 @@ function callme(err, window) {
     window.$ = $;
 
 
-    sharedstuff.extractinfo($);
+    sharedstuff.extractinfo(classes,$);
     window.close();
     console.log(classes);
     calandar(classes).save(argv.o);

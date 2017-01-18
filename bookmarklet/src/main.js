@@ -12,7 +12,7 @@ if ($("#ptifrmtgtframe").length)
     utils.replaceWithIframeContents("#ptifrmtgtframe");
 
 } else if (($(".PAGROUPDIVIDER").length) & (document.title === "My Class Schedule")) {
-    window.removeEventListener("DOMContentLoaded", stage2, false)
+    window.removeEventListener("DOMContentLoaded", stage2, false);
     stage2();
 }
 function stage2() {
@@ -21,7 +21,7 @@ function stage2() {
     }
     var calandar = require("../../parsefromhtmlfile/src/calandarstuff");
     var classes = [];
-    sharedstuff.extractinfo(classes);
+    sharedstuff.extractinfo(classes,$);
     utils.downloadfile(calandar(classes).toString(), "cool.ics");
 }
 

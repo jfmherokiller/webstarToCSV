@@ -1,8 +1,7 @@
 /**
  * Created by jfmmeyers on 1/18/17.
  */
-
-function extractInfo(classarray) {
+function extractInfo(classarray,$) {
     var ClassObj = require("../../parsefromhtmlfile/src/classobjectstuff");
     $('[id^="win0divDERIVED_REGFRM1_DESCR20"]').each(function () {
         var classname = $(this).find(".PAGROUPDIVIDER").text();
@@ -25,7 +24,7 @@ function extractInfo(classarray) {
     });
 }
 
-function runclickEvent(elementid)
+function runclickEvent(elementid,$)
 {
     $(elementid).trigger("click");
 }
