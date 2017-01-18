@@ -1,8 +1,7 @@
 /**
  * Created by jfmmeyers on 8/17/16.
  */
-var ICal = require('../../libfiles/icalpatched/index');
-var cal = ICal();
+var cal = require('../../libfiles/icalpatched/index')();
 var moment = require('moment-timezone');
 function testing(classlist) {
 
