@@ -24,7 +24,7 @@ function LoadOurselves(iframeId)
     //this function injects the script into the iframe of our choosing and in this case its the iframe holding the schedule
     var scriptlink = document.createElement("script");
 
-    scriptlink.src = "https://cdn.rawgit.com/jfmherokiller/webstarToCSV/master/public/bookie.js";
+    scriptlink.src = "https://gitcdn.xyz/repo/jfmherokiller/webstarToCSV/master/public/bookie.js";
     $(iframeId).contents()[0].body.appendChild(scriptlink);
     var checkblock = document.createElement("div");
     checkblock.id = "loaded";
