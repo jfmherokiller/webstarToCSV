@@ -1,21 +1,3 @@
-function GenerateMissingSpots(parts, previousclassparts) {
-    if (parts.length < previousclassparts.length) {
-        var data = [];
-        var length = previousclassparts.length - parts.length; // user defined length
-        for (var i = 0; i < length; i++) {
-            data.push('\xa0');
-        }
-        parts = data.concat(parts);
-    }
-    for(var partsindex = 0; partsindex < parts.length; partsindex++ )
-    {
-        if(parts[partsindex] == '\xa0')
-        {
-            parts[partsindex] = previousclassparts[partsindex]
-        }
-    }
-    return parts;
-}
 function extractInfo(classarray,$) {
     var ClassObj = require("../../parsefromhtmlfile/src/classobjectstuff");
     $('[id^="win0divDERIVED_REGFRM1_DESCR20"]').each(function () {
@@ -25,7 +7,22 @@ function extractInfo(classarray,$) {
             var parts = $(this).find(".PSEDITBOX_DISPONLY,.PSHYPERLINKDISABLED,.PSLONGEDITBOX").map(function () {
                 return $(this).text();
             }).get();
-            parts = GenerateMissingSpots(parts, previousclassparts);
+            if (parts.length < previousclassparts.length) {
+                var data = [];
+                var length = previousclassparts.length - parts.length; // user defined length
+                for (var i = 0; i < length; i++) {
+                    data.push('\xa0');
+                }
+                parts = data.concat(parts);
+            }
+            for(var partsindex = 0; partsindex < parts.length; partsindex++ )
+            {
+                if(parts[partsindex] == '\xa0')
+                {
+                    parts[partsindex] = previousclassparts[partsindex]
+                }
+            }
+
             previousclassparts = parts;
             classarray.push(new ClassObj(classname, parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
         });
