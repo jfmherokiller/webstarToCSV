@@ -7,11 +7,16 @@ function extractInfo(classarray,$) {
             var parts = $(this).find(".PSEDITBOX_DISPONLY,.PSHYPERLINKDISABLED,.PSLONGEDITBOX").map(function () {
                 return $(this).text();
             }).get();
-            if (parts.length < previousclassparts.length) {
+            if (parts.length < 7) {
                 var data = [];
-                var length = previousclassparts.length - parts.length; // user defined length
-                for (var i = 0; i < length; i++) {
-                    data.push('\xa0');
+                var plength = 7 - parts.length; // user defined length
+                if(plength = 1)
+                {
+                    data.push('\xa0')
+                } else {
+                    for (var i = 0; i < plength; i++) {
+                        data.push('\xa0');
+                    }
                 }
                 parts = data.concat(parts);
             }
