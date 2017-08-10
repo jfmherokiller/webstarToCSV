@@ -1,5 +1,6 @@
+var $ = require('../../libfiles/jquery-3.1.0').noConflict(true);
 function InjectScope() {
-    $ = require('../../libfiles/jquery-3.1.0').noConflict(true);
+
     var utils = require("./utilfunctions");
     var sharedstuff = require("../../shared/src/SharedUilityFunctions");
     window.addEventListener("DOMContentLoaded", stage2, false);
@@ -14,7 +15,7 @@ function InjectScope() {
         stage2();
     }
     function stage2() {
-        if (($(".PSRADIOBUTTON").length != 0) || ($("#DERIVED_CLASS_S_START_DT_LBL").length != 0)) {
+        if (($(".PSRADIOBUTTON").length !== 0) || ($("#DERIVED_CLASS_S_START_DT_LBL").length !== 0)) {
             alert("Error Wrong Page Please go to the printer Friendly Listview Page");
         }
         var calandar = require("../../parsefromhtmlfile/src/calandarstuff");
@@ -25,3 +26,4 @@ function InjectScope() {
 }
 
 exports.scriptinejct = InjectScope;
+exports.jqueryout = $;
