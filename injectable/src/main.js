@@ -1,6 +1,6 @@
 var $ = require('../../libfiles/jquery-3.1.0').noConflict(true);
 function InjectScope() {
-
+    var $ = require('../../libfiles/jquery-3.1.0').noConflict(true);
     var utils = require("./utilfunctions");
     var sharedstuff = require("../../shared/src/SharedUilityFunctions");
     window.addEventListener("DOMContentLoaded", stage2, false);
