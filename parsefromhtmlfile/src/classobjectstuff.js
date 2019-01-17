@@ -5,7 +5,12 @@ var moment = require('moment-timezone');
 
 function ClassObj(Classname, Number, Section, Component, DaysAndTimes, Room, InstructorName, StartAndEnd) {
     var daysandtimestemp = DaysAndTimes;
-    var daystemp = daysandtimestemp.split(" ")[0];
+    if(daysandtimestemp.includes("Mo")|| daysandtimestemp.includes("Tu")|| daysandtimestemp.includes("We")|| daysandtimestemp.includes("Th")|| daysandtimestemp.includes("Fr")) {
+        var daystemp = daysandtimestemp.split(" ")[0];
+    } else {
+        var daystemp = "MoTuWeThFr"
+    }
+    console.log(daystemp);
     var classstarttemp = moment(StartAndEnd.split("-")[0].trim(), "MM-DD-YYYY")._d;
     var classendtemp = moment(StartAndEnd.split("-")[1].trim(), "MM-DD-YYYY")._d;
     var timestarttemp = daysandtimestemp.replace(daystemp, "").trim().split("-")[0].trim();
