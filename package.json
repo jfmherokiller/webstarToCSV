@@ -11,7 +11,7 @@
   "dependencies": {
     "acorn": "^6.0.5",
     "downloadjs": "^1.4.6",
-    "jsdom": "^9.4.2",
+    "jsdom": "^16.5.0",
     "moment": "^2.14.1",
     "moment-timezone": "latest",
     "yargs": "latest"
